@@ -1,0 +1,12 @@
+// script.js
+document.getElementById("voteForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Verkrijg de gekozen genre
+    const chosenGenre = document.querySelector('input[name="genre"]:checked').value;
+
+    // Verberg het formulier en toon het resultaat
+    document.getElementById("voteForm").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    document.getElementById("chosenGenre").textContent = chosenGenre;
+});
